@@ -1,0 +1,7 @@
+# ignore node_modules
+build/node_modules/
+node_modules/
+.vscode/
+.env
+config.env.production
+
