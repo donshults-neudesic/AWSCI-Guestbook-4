@@ -1,5 +1,6 @@
 #!/usr/bin/env goovy
 node('master'){
+    git url: https://github.com/donshults-neudesic/AWSCI-Guestbook-4.git
     try{
         stage('build'){
             checkout scm
