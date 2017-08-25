@@ -8,13 +8,13 @@ node('master'){
        env.PATH = "${node}/bin:${env.PATH}"
         stage('build'){
             checkout scm
-            echo "Environment will be : $env.PATH"
+            echo "Environment will be : $env.PATH - $env.NODE_PATH"
             sh 'node -v'
             sh "npm -v"
             sh "npm install"
             sh "npm install gulp --save-dev"
             sh "npm install gulp-cli --save-dev"
-            sh "gulp -v"
+            sh "gulp -v" 
             //sh "gulp clean"
             //sh "gulp js"
             sh "gulp zip"
