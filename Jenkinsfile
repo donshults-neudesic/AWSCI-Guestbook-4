@@ -1,9 +1,9 @@
 #!/usr/bin/env goovy
 node('master'){
-  withEnv(["PATH+NODE=${tool name: 'node-6.11.1', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'}/bin"]) {
-    sh 'node -v'
-  }
+
     try{
+        withEnv(["PATH+NODE=${tool name: 'node-6.11.1', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'}/bin"]) 
+        {sh 'node -v'  }
         stage('build'){
             checkout scm
             sh "node -v"
