@@ -12,7 +12,7 @@ node('master'){
             sh "echo 'We are deploying to AWS'"
         }
     } catch(error) {
-        sh "echo 'Caught an error'+error"
+        sh "echo 'Caught an error'"
 
     } finally {}
         sh "echo 'finally runs now'"
