@@ -11,9 +11,10 @@ node('master'){
             echo "Environment will be : $env.PATH"
             sh 'node -v'
             sh "npm -v"
-            //sh "gulp clean"
-            //sh "gulp js"
-            //sh "gulp zip"
+            sh "npm install"
+            sh "gulp clean"
+            sh "gulp js"
+            sh "gulp zip"
         }
         stage('deploy-aws'){
             sh "echo 'We are deploying to AWS'"
