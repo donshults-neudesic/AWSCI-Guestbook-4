@@ -2,6 +2,7 @@ var AWS = require('aws-sdk');
 var del = require('del');
 var fs = require('fs');
 var gutil = require('gulp-util');
+var jenkins = require('gulp-jenkins');
 require('dotenv').config()
 
 var config = {
@@ -33,6 +34,7 @@ gulp.task('setawsprofile', function () {
     console.log(secretAccessKey);
 });
 
+jenkins.init({username:'admin', password: 'Deepsp@ce9', url: '34.211.169.164:8080'})
 //Clean the build folder and delete the lambda code zip.
 gulp.task('clean', function () {
     return del('./build', del('./guestbook.zip'));
