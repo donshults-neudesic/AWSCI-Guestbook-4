@@ -2,8 +2,8 @@
 node('master'){
     //sh "export PATH=$PATH:~/.nvm/versions/node/v6.11.1/bin"
     try{
-        def node = tool name: 'Node-6.11.1'
-        env.PATH = "${node}/bin:${env.PATH}"
+       // def node = tool name: 'Node-6.11.1'
+       // env.PATH = "${node}/bin:${env.PATH}"
         stage('build'){
             checkout scm
             echo "Environment will be : ${env.NODE_ENV} - $PATH"
