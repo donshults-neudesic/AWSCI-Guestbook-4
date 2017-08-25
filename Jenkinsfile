@@ -1,10 +1,9 @@
 #!/usr/bin/env goovy
 node('master'){
-    env.PATH = "${nodeHome}/bin:${env.PATH}"
-    sh "echo 'Hello'"
     try{
         stage('build'){
             checkout scm
+            sh "node -v"
             sh "npm install"
             sh "gulp clean"
             sh "gulp js"
