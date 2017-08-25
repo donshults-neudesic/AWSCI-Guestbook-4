@@ -2,8 +2,6 @@
 node('master'){
     env.PATH = "${nodeHome}/bin:${env.PATH}"
     sh "echo env.Path"
-    sh "node -v"
-    sh "npm -v"
     try{
         stage('build'){
             checkout scm
