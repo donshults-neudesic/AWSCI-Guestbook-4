@@ -8,11 +8,11 @@ node('master'){
             checkout scm
             echo "Environment will be : $PATH"
             
-            sh "node -v"
-            sh "npm install"
-            sh "gulp clean"
-            sh "gulp js"
-            sh "gulp zip"
+            sh "/home/ec2-user/.mvm/versions/node/v6.11.1/bin/node -v"
+            //sh "npm install"
+            //sh "gulp clean"
+            //sh "gulp js"
+            //sh "gulp zip"
         }
         stage('deploy-aws'){
             sh "echo 'We are deploying to AWS'"
