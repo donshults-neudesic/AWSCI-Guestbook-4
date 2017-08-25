@@ -11,7 +11,7 @@ node('master'){
             echo "Environment will be : $PATH"
             
             sh "/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/nodejs6.10/bin/node -v"
-            sh "/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/nodejs6.10/bin/npm install"
+            sh "/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/nodejs6.10/bin/npm -v"
             //sh "gulp clean"
             //sh "gulp js"
             //sh "gulp zip"
