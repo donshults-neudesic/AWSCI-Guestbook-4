@@ -1,6 +1,5 @@
 #!/usr/bin/env goovy
 node('master'){
-    def nodeHome = tool name: 'node-6.11.1'
     env.PATH = "${nodeHome}/bin:${env.PATH}"
     sh "echo env.Path"
     sh "node -v"
