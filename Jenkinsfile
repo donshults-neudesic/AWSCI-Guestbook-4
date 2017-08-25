@@ -1,5 +1,8 @@
 #!/usr/bin/env goovy
 node('master'){
+    def nodeHome = tool name: 'node-6.10.1', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+    env.PATH = "${nodeHome}/bin:${env.PATH}"
+    sh "node -v"
     try{
         stage('build'){
             checkout scm
