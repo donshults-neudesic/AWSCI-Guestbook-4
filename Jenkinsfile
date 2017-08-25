@@ -1,13 +1,10 @@
 #!/usr/bin/env groovy
 node('master'){
     //sh "export PATH="/.nvm/versions/node/v6.11.1/bin:$PATH"
-    pipeline{
+    try{
         environment {
             PATH = "/.nvm/versions/node/v6.11.1/bin:$PATH"
         }
-    }
-    try{
-
        // def node = tool name: 'Node-6.11.1'
        // env.PATH = "${node}/bin:${env.PATH}"
         stage('build'){
