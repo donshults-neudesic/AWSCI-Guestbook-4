@@ -2,7 +2,8 @@
 node('master'){
 
     try{
-        print "Environment will be : ${env.NODE_ENV}"
+        env.NODE_ENV = "test"
+        echo "Environment will be : ${env.NODE_ENV}"
         stage('build'){
             checkout scm
             sh "node -v"
