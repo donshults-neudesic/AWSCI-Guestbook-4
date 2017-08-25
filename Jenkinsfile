@@ -14,11 +14,11 @@ node('master'){
             sh "npm install"
             sh "npm install gulp-cli --save-dev"
             sh "npm install gulp --save-dev"
-            sh "gulp -v" 
+            sh "node_modules/.bin/gulp -v" 
             //sh "gulp clean"
             //sh "gulp js"
             //sh "gulp zip"
-            
+
         }
         stage('deploy-aws'){
             sh "echo 'We are deploying to AWS'"
