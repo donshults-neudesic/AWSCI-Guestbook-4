@@ -1,7 +1,7 @@
 #!/usr/bin/env goovy
 node('master'){
     env.PATH = "${nodeHome}/bin:${env.PATH}"
-    sh "echo env.Path"
+    sh "echo 'Hello'"
     try{
         stage('build'){
             checkout scm
