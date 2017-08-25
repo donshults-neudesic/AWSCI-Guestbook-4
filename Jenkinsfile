@@ -2,16 +2,15 @@
 node('master'){
     //sh "export PATH="/.nvm/versions/node/v6.11.1/bin:$PATH"
     try{
-        environment {
-            PATH = "/.nvm/versions/node/v6.11.1/bin:$PATH"
-        }
+       // PATH = "/.nvm/versions/node/v6.11.1/bin:$PATH"
+       
        // def node = tool name: 'Node-6.11.1'
        // env.PATH = "${node}/bin:${env.PATH}"
         stage('build'){
             checkout scm
             echo "Environment will be : $PATH"
             
-            sh "/.nvm/versions/node/v6.11.1/bin/node -v"
+            sh "/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/nodejst6.10/bin/node -v"
             //sh "npm install"
             //sh "gulp clean"
             //sh "gulp js"
