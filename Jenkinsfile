@@ -15,7 +15,7 @@ node('master'){
             sh "npm install gulp-cli --save-dev"
             sh "npm install gulp --save-dev"
             sh "node_modules/.bin/gulp -v" 
-            //sh "gulp clean"
+            sh "gulp clean"
             //sh "gulp js"
             //sh "gulp zip"
 
