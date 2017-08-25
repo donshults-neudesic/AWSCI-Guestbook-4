@@ -16,8 +16,8 @@ node('master'){
             sh "npm install gulp --save-dev"
             sh "node_modules/.bin/gulp -v" 
             sh "node_modules/.bin/gulp clean"
-            //sh "gulp js"
-            //sh "gulp zip"
+            sh "node_modules/.bin/gulp js"
+            sh "node_modules/.bin/gulp zip"
 
         }
         stage('deploy-aws'){
