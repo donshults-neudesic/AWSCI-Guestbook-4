@@ -1,11 +1,12 @@
 #!/usr/bin/env goovy
 node('master'){
-    sh "export PATH=$PATH:~/.nvm/versions/node/v6.11.1/bin"
+    //sh "export PATH=$PATH:~/.nvm/versions/node/v6.11.1/bin"
     try{
-        env.NODE_ENV = "test"
+        def node = tool name: 'Node-7.4.0', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+        env.PATH = "${node}/bin:${env.PATH}"
         stage('build'){
             checkout scm
-            echo "Environment will be : ${env.NODE_ENV} - $PATH"
+            echo "Environment will be : ${env.PATH} - $PATH"
             
             sh "node -v"
             sh "npm install"
