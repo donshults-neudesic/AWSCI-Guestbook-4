@@ -1,6 +1,6 @@
 #!/usr/bin/env goovy
 node('master'){
-    sh "export $PATH=$PATH+'/.nvm/versions/node/v6.11.1/bin'"
+    sh "export $PATH=$PATH:~/.nvm/versions/node/v6.11.1/bin"
     try{
         env.NODE_ENV = "test"
         stage('build'){
