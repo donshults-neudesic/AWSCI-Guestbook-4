@@ -5,7 +5,8 @@ node('master'){
         env.NODE_ENV = "test"
         stage('build'){
             checkout scm
-            echo "Environment will be : ${env.NODE_ENV}"
+            echo "Environment will be : ${env.NODE_ENV} - $PATH"
+            
             sh "node -v"
             sh "npm install"
             sh "gulp clean"
