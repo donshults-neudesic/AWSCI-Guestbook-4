@@ -1,4 +1,3 @@
-
 var AWS = require('aws-sdk');
 var del = require('del');
 var fs = require('fs');
