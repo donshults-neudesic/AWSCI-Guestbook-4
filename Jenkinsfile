@@ -11,10 +11,11 @@ node('master'){
         stage('deploy-aws'){
             sh "echo 'We are deploying to AWS'"
         }
+    }
     } catch(error) {
         sh "echo 'Caught an error'"
 
-    } finally {}
+    } finally {
         sh "echo 'finally runs now'"
     }
 
