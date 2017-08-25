@@ -10,8 +10,7 @@ node('master'){
             checkout scm
             echo "Environment will be : $env.PATH"
             sh 'node -v'
-            //sh "/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/nodejs6.10/bin/node -v"
-            //sh "/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/nodejs6.10/bin/npm -v"
+            sh "npm -v"
             //sh "gulp clean"
             //sh "gulp js"
             //sh "gulp zip"
