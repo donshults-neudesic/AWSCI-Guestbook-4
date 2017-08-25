@@ -11,7 +11,7 @@ node('master'){
             checkout scm
             echo "Environment will be : $PATH"
             
-            sh "sudo /home/ec2-user/.nvm/versions/node/v6.11.1/bin/node -v"
+            sh "/.nvm/versions/node/v6.11.1/bin/node -v"
             //sh "npm install"
             //sh "gulp clean"
             //sh "gulp js"
