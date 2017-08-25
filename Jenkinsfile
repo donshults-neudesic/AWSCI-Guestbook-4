@@ -2,7 +2,7 @@
 node('master'){
     //sh "export PATH=$PATH:~/.nvm/versions/node/v6.11.1/bin"
     try{
-        def node = tool name: 'Node-7.4.0', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+        def node = tool name: 'Node-6.11.1', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
         env.PATH = "${node}/bin:${env.PATH}"
         stage('build'){
             checkout scm
