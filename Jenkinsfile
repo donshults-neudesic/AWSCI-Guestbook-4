@@ -2,8 +2,7 @@
 node('master'){
 
     try{
-        def nodeHome = tool name: 'node-6.11.1', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
-        sh "${nodeHome}/bin/node -v"
+        print "Environment will be : ${env.NODE_ENV}"
         stage('build'){
             checkout scm
             sh "node -v"
