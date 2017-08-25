@@ -13,7 +13,7 @@ node('master'){
             sh "npm -v"
             sh "npm install"
             sh "npm install gulp --save-dev"
-            sh "gulp -v"
+            sh "node_mobules\bin\gulp -v"
             //sh "gulp clean"
             //sh "gulp js"
             sh "gulp zip"
