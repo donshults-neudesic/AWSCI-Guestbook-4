@@ -18,6 +18,7 @@ node('master'){
             //sh "gulp clean"
             //sh "gulp js"
             //sh "gulp zip"
+            
         }
         stage('deploy-aws'){
             sh "echo 'We are deploying to AWS'"
