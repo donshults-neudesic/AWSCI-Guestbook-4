@@ -3,7 +3,7 @@ var del = require('del');
 var fs = require('fs');
 var gutil = require('gulp-util');
 var jenkins = require('gulp-jenkins');
-require('dotenv').config()
+//require('dotenv').config()
 
 var config = {
     accessKeyId: process.env.aws_access_key_id,
