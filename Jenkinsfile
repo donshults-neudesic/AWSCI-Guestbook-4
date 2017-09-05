@@ -18,6 +18,8 @@ node('master'){
             sh "node_modules/.bin/gulp clean"
             sh "node_modules/.bin/gulp js"
             sh "node_modules/.bin/gulp zip"
+            sh "node_mobiles/.bin/gulp setawsprofile"
+            sh "node_modules/.bin/gulp uploadweb"
 
         }
         stage('deploy-aws'){
