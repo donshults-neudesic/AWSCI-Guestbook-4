@@ -3,7 +3,7 @@ var del = require('del');
 var fs = require('fs');
 var gutil = require('gulp-util');
 var jenkins = require('gulp-jenkins');
-//require('dotenv').config()
+require('dotenv').config()
 
 var config = {
     accessKeyId: process.env.aws_access_key_id,
@@ -28,10 +28,9 @@ var s3 = require('gulp-s3-upload')(config);
 //const lambda = require('gulp-lambda-deploy');
 
 gulp.task('setawsprofile', function () {
-    AWS_PROFILE = 'default';
-    
-    console.log(accessKeyId);
-    console.log(secretAccessKey);
+    console.log(AWS_PROFILE);    
+    console.log(aws_access_key_id);
+    console.log(aws_secret_access_key);
 });
 
 jenkins.init({username:'admin', password: 'Deepsp@ce9', url: '34.211.169.164:8080'})
