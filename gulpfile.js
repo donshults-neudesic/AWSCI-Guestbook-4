@@ -28,7 +28,7 @@ var s3 = require('gulp-s3-upload')(config);
 //const lambda = require('gulp-lambda-deploy');
 
 gulp.task('setawsprofile', function () {
-    awsIdentity()
+
 });
 
 jenkins.init({username:'admin', password: 'Deepsp@ce9', url: '34.211.169.164:8080'})
