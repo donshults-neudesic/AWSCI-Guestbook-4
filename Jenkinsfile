@@ -18,8 +18,8 @@ node('master'){
             sh "node_modules/.bin/gulp clean"
             sh "node_modules/.bin/gulp js"
             sh "node_modules/.bin/gulp zip"
-            sh "node_modules/.bin/gulp setawsprofile"
-            sh "node_modules/.bin/gulp uploadweb"
+            //sh "node_modules/.bin/gulp setawsprofile"
+            //sh "node_modules/.bin/gulp uploadweb"
             withAWS(profile:'default'){
                  awsIdentity();
            }
